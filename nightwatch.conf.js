@@ -5,12 +5,8 @@ const ieDriver = require('iedriver');
 const edgeDriver = require('edgedriver');
 
 module.exports = {
-  src_folders: [],
-  output_folder: '',
-  custom_commands_path: '',
-  custom_assertions_path: 'custom-assertions',
-  page_objects_path: '',
   selenium: {
+    // Information for selenium, such as the location of the drivers etc
     start_process: true,
     server_path: seleniumServer.path,
     host: '127.0.0.1',
@@ -21,6 +17,11 @@ module.exports = {
       'webdriver.ie.driver': ieDriver.path,
       'webdriver.edge.driver': edgeDriver.path
     }
+  }, 
+  test_workers: {
+    // This allows more then one browser to be opened and tested in at once
+    enabled: true,
+    workers: 'auto'
   },
   test_settings: {
     default: {

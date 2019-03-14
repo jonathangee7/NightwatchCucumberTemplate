@@ -1,4 +1,12 @@
 # NightwatchCucumberTemplate
+---QUICKSTART---
+
+
+npm install
+npm test
+
+
+
 ---INTRODUCTION---
 
 
